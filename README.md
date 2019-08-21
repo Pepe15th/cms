@@ -16,6 +16,10 @@ cp phpunit.xml.dist phpunit.xml
 
 V těchto souborech je potřeba následně upravit DATABASE_URL pro jednotlivá prostředí.
 
+```
+composer init-db
+```
+
 ## Spuštění
 
 ```
@@ -26,13 +30,12 @@ symfony server:start
 ## Testy
 
 ```
-composer update-tests
-/bin/phpunit
+composer init-tests    # pouze pro samotné vytvoření testovací databáze
+composer update-tests  # pouze při změně databázové struktury
+bin/phpunit
 ```
-
-Příkaz update-tests stačí spustit pouze při změně databázové struktury.
 
 
 ## Dokumentace
 
-Všechnu potřebnou dokumentaci naleznete na adrese /api/doc.
+Všechnu potřebnou dokumentaci naleznete na adrese **/api/doc**.

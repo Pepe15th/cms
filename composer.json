@@ -63,9 +63,14 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
+        "init-db": [
+            "php bin/console doctrine:database:create",
+            "php bin/console doctrine:migrations:migrate"
+        ],
+        "init-tests": [
+            "php bin/console doctrine:database:create --env=test"
+        ],
         "update-tests": [
-            "php bin/console doctrine:database:drop --force --env=test",
-            "php bin/console doctrine:database:create --env=test",
             "php bin/console doctrine:schema:update --force --env=test"
         ]
     },
