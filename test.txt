@@ -1,0 +1,18 @@
+Zadání:
+Implementovat jednoduche CMS pomocí Symfony Frameworku.
+Restové API bude komunikovat pomoci formátu JSON.
+
+API obsahuje endpointy:
+- Výpisem publikovaných článků vcetne strankovani
+- Detail článku
+- Správa článků 
+    - výpis všech článků
+	- přidání
+	- editace
+	- mazání
+	- publikování článku
+
+Datová struktura:
+- Post (id, title, content, published_at, created_at, modified_at)
+
+Rád bych, aby ses pokusil o vytvoření testu, který zkontroluje, že do seznamu endpointu publikovaných článků, přibude po provedení akce publikace nový.
